@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>DOS Game Demo</title>
+  <title>DOS Game Demo: Tetris</title>
   <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
   <link rel="stylesheet" href="https://js-dos.com/6.22/current/js-dos.css" />
   <style>
@@ -16,7 +16,11 @@
   <script>
     Dos(document.getElementById("dosbox"), {
       wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
-    }).run("tetris_demo.zip");
+    }).ready((fs, main) => {
+      fs.extract("tetris_demo.zip").then(() => {
+        main(["TETRIS.EXE"]);
+      });
+    });
   </script>
 </body>
 </html>
