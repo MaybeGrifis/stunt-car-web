@@ -17,8 +17,8 @@
     Dos(document.getElementById("dosbox"), {
       wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
     }).ready((fs, main) => {
-      fs.extract("tetris.zip").then(() => {
-        main(["Tetris.exe"]);
+      fs.extract("tetris_working.zip").then(() => {
+        main(["TETRIS.COM"]);
       });
     });
   </script>
